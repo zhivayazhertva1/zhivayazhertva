@@ -1,0 +1,177 @@
+/* ==========================================
+   暗黑复古风格 - style.css
+   黑色背景 / 浅红色字体 / 传统蓝色超链接
+   ========================================== */
+
+/* 全局重置与基础设置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ff9999; /* 浅红色正文字体 */
+    background-color: #000000; /* 纯黑背景 */
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* 经典传统超链接样式 */
+a {
+    color: #0000ee; /* 经典的传统浏览器超链接蓝 */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b; /* 经典的传统已访问链接紫色 */
+}
+
+a:hover {
+    color: #3366ff; /* 鼠标悬停时的明亮蓝色 */
+    background-color: #1a1a1a; /* 悬停时微微高亮的暗色背景 */
+}
+
+/* 顶部 Header */
+.site-header {
+    margin-bottom: 20px;
+}
+
+.site-header .logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffb3b3; /* 略亮的浅粉红/浅红色 Logo */
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+/* 导航栏 Nav */
+.site-nav {
+    border-top: 1px solid #333333; /* 暗灰色分割线 */
+    border-bottom: 1px solid #333333;
+    padding: 8px 0;
+    margin-bottom: 30px;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-nav a {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #0000ee; /* 传统蓝色导航链接 */
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: #5599ff; /* 激活或悬停状态的浅蓝色 */
+}
+
+/* 主内容区 Container */
+.container h1 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #ffb3b3; /* 浅红标题 */
+}
+
+.container h2 {
+    font-size: 17px;
+    margin: 20px 0 10px 0;
+    color: #ffaaaa;
+}
+
+.container p {
+    margin-bottom: 15px;
+}
+
+/* 首页特定样式 */
+.intro-section {
+    margin-bottom: 35px;
+}
+
+.post-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.post-list li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.post-list .date {
+    color: #cc6666; /* 稍暗的浅红/玫瑰色日期 */
+    font-size: 13px;
+    font-family: monospace;
+    min-width: 85px;
+}
+
+/* 文章列表块样式 (words.html) */
+.post-item {
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px dotted #444444; /* 深灰色虚线分割 */
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-item .post-date {
+    font-size: 13px;
+    color: #cc6666;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+
+/* 图片与配图说明 */
+/* ==========================================
+   图片自适应与排版优化
+   ========================================== */
+
+/* 1. 全局图片自适应属性 */
+img {
+    max-width: 100%;    /* 限制图片最大宽度不超过其父级容器 */
+    height: auto;       /* 高度按比例自动缩放，防止图片拉伸变形 */
+    display: block;     /* 消除图片底部默认的微小间隙 */
+}
+
+/* 2. 文章内图片的边框与排版美化 */
+.post-image {
+    margin: 20px 0;
+    width: 100%;        /* 保证图片容器占满当前栏目 */
+}
+
+.post-image img {
+    border: 1px solid #333333; /* 暗灰微弱边框 */
+    border-radius: 2px;        /* 极轻微圆角（可选，不加即为硬朗直角） */
+}
+
+/* 3. 配图说明文字 */
+.post-image .caption {
+    display: block;
+    font-size: 12px;
+    color: #dd8888;     /* 浅红配图文字 */
+    margin-top: 6px;
+    text-align: left;   /* 或居中 text-align: center; */
+}
+
+/* 页脚 Footer */
+.site-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #222222;
+    font-size: 12px;
+    color: #aa5555; /* 暗浅红色页脚 */
+    text-align: center;
+}
