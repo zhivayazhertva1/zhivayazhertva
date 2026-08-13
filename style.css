@@ -174,4 +174,120 @@ img {
     font-size: 12px;
     color: #aa5555; /* 暗浅红色页脚 */
     text-align: center;
+.gothic-fold {
+    width: min(700px, 100%);
+    margin: 30px auto;
+    background: #0b0b0b;
+    border: 1px solid #383838;
+    color: #d8d8d8;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gothic-fold:hover {
+    border-color: #666;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.06);
+}
+
+/* 标题 */
+.gothic-fold summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    letter-spacing: 0.08em;
+    font-size: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #111 0%,
+            #171717 50%,
+            #111 100%
+        );
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* Firefox */
+.gothic-fold summary::-webkit-details-marker {
+    display: none;
+}
+
+.gothic-fold summary::marker {
+    display: none;
+}
+
+.gothic-fold summary:hover {
+    background: #191919;
+    color: #fff;
+}
+
+/* 左边的小装饰 */
+.fold-symbol {
+    font-size: 13px;
+    opacity: 0.7;
+    transition: transform 0.4s ease;
+}
+
+/* 右边箭头 */
+.fold-arrow {
+    margin-left: auto;
+    font-size: 18px;
+    opacity: 0.6;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+}
+
+/* 打开以后 */
+.gothic-fold[open] {
+    border-color: #666;
+}
+
+.gothic-fold[open] .fold-symbol {
+    transform: rotate(180deg);
+}
+
+.gothic-fold[open] .fold-arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* 图片区域 */
+.fold-content {
+    padding: 0 18px 18px;
+}
+
+/* 图片 */
+.fold-content img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+
+    filter: brightness(0.9);
+
+    transition:
+        filter 0.4s ease,
+        transform 0.4s ease;
+}
+
+.fold-content img:hover {
+    filter: brightness(1);
+}
+   
 }
