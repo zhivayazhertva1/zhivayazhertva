@@ -5,6 +5,15 @@
   <title>ARTS - zhivaya zhertva</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+document.querySelectorAll('img').forEach(img => {
+    if (img.src.includes('title.png')) {
+        img.loading = 'eager';
+    } else {
+        img.loading = 'lazy';
+    }
+});
+</script>
 <body>
   <div>
     <img src="images/title.png" alt="zhivaya zhertva" width="75%" height="75%">
